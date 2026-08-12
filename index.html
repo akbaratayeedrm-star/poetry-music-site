@@ -1,115 +1,429 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>آرشیو شعر و موسیقی</title>
-  <meta name="description" content="آرشیو شخصی شعر، موسیقی و آثار هنری">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; background: #101010; color: #eee;
-      font-family: Vazirmatn, sans-serif; line-height: 2;
-    }
-    header {
-      min-height: 82vh; display: flex; align-items: center; justify-content: center;
-      text-align: center; padding: 40px 20px;
-      background: radial-gradient(circle at center, #272727 0, #101010 58%);
-    }
-    .hero { max-width: 760px; }
-    .eyebrow { color: #aaa; letter-spacing: 3px; font-size: .8rem; }
-    h1 { font-size: clamp(2.5rem, 7vw, 5.5rem); margin: 15px 0; font-weight: 300; }
-    .hero p { color: #bbb; font-size: 1.1rem; }
-    nav {
-      position: sticky; top: 0; z-index: 10; padding: 12px 20px;
-      background: rgba(16,16,16,.92); backdrop-filter: blur(10px);
-      border-bottom: 1px solid #292929; text-align: center;
-    }
-    nav a { color: #ddd; text-decoration: none; margin: 0 14px; font-size: .9rem; }
-    section { max-width: 900px; margin: auto; padding: 80px 22px; }
-    h2 { font-size: 2rem; font-weight: 400; margin-bottom: 35px; }
-    .poem, .track, .about {
-      border: 1px solid #292929; border-radius: 18px; padding: 28px;
-      background: #151515; margin-bottom: 25px;
-    }
-    .poem-title { font-size: 1.35rem; margin-top: 0; }
-    .poem-text { white-space: pre-line; color: #d4d4d4; }
-    audio { width: 100%; margin-top: 12px; }
-    .track small { color: #888; }
-    footer { text-align: center; padding: 50px 20px; color: #777; border-top: 1px solid #292929; }
-    @media (max-width: 600px) {
-      nav a { margin: 0 6px; font-size: .78rem; }
-      section { padding: 55px 16px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Akbar Atayee | Poetry · Music · Sound</title>
+
+<meta name="description" content="Akbar Atayee — Afghan musician, composer, poet and artist based in Germany.">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: #e8e8e8;
+  font-family: Arial, sans-serif;
+  line-height: 1.9;
+}
+
+header {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at center, #292929 0%, #0b0b0b 65%);
+}
+
+.hero {
+  max-width: 850px;
+}
+
+.label {
+  color: #999;
+  letter-spacing: 5px;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 300;
+  margin: 15px 0;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 18px;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 15px;
+  text-align: center;
+  background: rgba(11,11,11,.94);
+  border-bottom: 1px solid #252525;
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 85px 22px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #272727;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 22px;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.meta {
+  color: #888;
+  font-size: 14px;
+}
+
+.poem {
+  white-space: pre-line;
+  color: #d0d0d0;
+}
+
+.work {
+  border-bottom: 1px solid #292929;
+  padding: 18px 0;
+}
+
+.work:last-child {
+  border-bottom: none;
+}
+
+audio {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.download {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 7px 14px;
+  border: 1px solid #444;
+  border-radius: 20px;
+  color: #ddd;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.download:hover {
+  background: #222;
+}
+
+.lang {
+  margin-top: 30px;
+}
+
+.lang a {
+  color: #aaa;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  color: #666;
+  border-top: 1px solid #222;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+  nav a {
+    margin: 0 5px;
+    font-size: 12px;
+  }
+
+  section {
+    padding: 60px 17px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <header id="home">
   <div class="hero">
-    <div class="eyebrow">POETRY · MUSIC · SOUND</div>
-    <h1>نام هنری شما</h1>
-    <p>آرشیوی شخصی از شعرها، موسیقی‌ها و تجربه‌های هنری من.</p>
+
+    <div class="label">
+      POETRY · MUSIC · SOUND
+    </div>
+
+    <h1>Akbar Atayee</h1>
+
+    <p class="subtitle">
+      Musician · Composer · Poet · Artist
+    </p>
+
+    <div class="lang">
+      <a href="#about">فارسی</a>
+      <span>·</span>
+      <a href="#about-en">English</a>
+    </div>
+
   </div>
 </header>
 
 <nav>
-  <a href="#poems">شعرها</a>
+  <a href="#poetry">شعر</a>
   <a href="#music">موسیقی</a>
+  <a href="#works">آثار</a>
   <a href="#about">درباره من</a>
 </nav>
 
-<section id="poems">
-  <h2>شعرها</h2>
 
-  <article class="poem">
-    <h3 class="poem-title">شَبور</h3>
-    <div class="poem-text">متن شعر خود را اینجا قرار دهید.
+<section id="poetry">
 
-می‌توانید هر شعر را در یک بخش جداگانه اضافه کنید.</div>
-  </article>
+<h2>شعر</h2>
 
-  <article class="poem">
-    <h3 class="poem-title">شعر دوم</h3>
-    <div class="poem-text">متن شعر دوم را اینجا قرار دهید.</div>
-  </article>
+<div class="card">
+
+<h3>شَبور</h3>
+
+<div class="poem">
+اینجا متن شعر «شَبور» قرار می‌گیرد.
+
+</div>
+
+</div>
+
 </section>
+
 
 <section id="music">
-  <h2>موسیقی</h2>
 
-  <div class="track">
-    <strong>قطعه اول</strong><br>
-    <small>نام آهنگساز / سال</small>
-    <audio controls>
-      <source src="audio/track-01.mp3" type="audio/mpeg">
-      مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
-    </audio>
-  </div>
+<h2>موسیقی</h2>
 
-  <div class="track">
-    <strong>قطعه دوم</strong><br>
-    <small>نام آهنگساز / سال</small>
-    <audio controls>
-      <source src="audio/track-02.mp3" type="audio/mpeg">
-      مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
-    </audio>
-  </div>
+<div class="card">
+
+<h3>آثار صوتی</h3>
+
+<p class="meta">
+فایل‌های صوتی و موسیقی‌های Akbar Atayee
+</p>
+
+<p>
+فایل‌های صوتی این بخش به‌زودی اضافه می‌شوند.
+</p>
+
+<!--
+برای اضافه کردن فایل صوتی:
+
+<audio controls>
+<source src="audio/bidad.mp3" type="audio/mpeg">
+</audio>
+
+<a class="download" href="audio/bidad.mp3" download>
+⬇ دانلود قطعه
+</a>
+-->
+
+</div>
+
 </section>
+
+
+<section id="works">
+
+<h2>آثار منتخب و همکاری‌ها</h2>
+
+
+<div class="card">
+
+<div class="work">
+<strong>بیداد</strong>
+<br>
+<span class="meta">
+آهنگساز / درامز · شعر: فریدون مشیری · Arikayn
+</span>
+</div>
+
+
+<div class="work">
+<strong>می‌بوسمت</strong>
+<br>
+<span class="meta">
+آهنگساز · شعر: رامین مظهر · خواننده: Ghawgha Taban
+</span>
+</div>
+
+
+<div class="work">
+<strong>رقص</strong>
+<br>
+<span class="meta">
+آهنگساز · شعر: رامین مظهر · خواننده: Ghawgha Taban
+</span>
+</div>
+
+
+<div class="work">
+<strong>کیستی</strong>
+<br>
+<span class="meta">
+آهنگساز · شعر: رامین مظهر · خواننده: Ghawgha Taban
+</span>
+</div>
+
+
+<div class="work">
+<strong>شاعر</strong>
+<br>
+<span class="meta">
+آهنگساز · شعر: رامین مظهر · خواننده: Ghawgha Taban
+</span>
+</div>
+
+
+<div class="work">
+<strong>جزیره</strong>
+<br>
+<span class="meta">
+آهنگساز · شعر: ابراهیم امینی · خواننده: Ghawgha Taban
+</span>
+</div>
+
+
+<div class="work">
+<strong>پرنده</strong>
+<br>
+<span class="meta">
+موسیقی تیتراژ فیلم · Back Vocals
+</span>
+</div>
+
+
+<div class="work">
+<strong>Bamikan</strong>
+<br>
+<span class="meta">
+نوازندهٔ درامز
+</span>
+</div>
+
+
+<div class="work">
+<strong>Arikayn</strong>
+<br>
+<span class="meta">
+نوازندهٔ درامز · آهنگساز · کمپوز تمامی لاین‌های درامز آثار گروه
+</span>
+</div>
+
+</div>
+
+</section>
+
 
 <section id="about">
-  <h2>درباره من</h2>
-  <div class="about">
-    <p>
-      اینجا می‌توانید بیوگرافی هنری خود، فعالیت‌های موسیقایی،
-      پروژه‌ها و مسیر هنری‌تان را بنویسید.
-    </p>
-  </div>
+
+<h2>درباره من</h2>
+
+<div class="card">
+
+<p>
+<strong>اکبر عطایی</strong> هنرمند، شاعر، موسیقی‌دان و آهنگساز اهل افغانستان است که در آلمان زندگی و فعالیت هنری می‌کند.
+</p>
+
+<p>
+فعالیت هنری او در مرز میان موسیقی، شعر و صداهای تجربی شکل گرفته و به‌ویژه بر گفت‌وگوی میان سنت‌های موسیقایی افغانستان، راک، موسیقی الکترونیک و صداهای معاصر تمرکز دارد.
+</p>
+
+<p>
+او فعالیت موسیقایی خود را به‌عنوان نوازندهٔ درامز و آهنگساز با گروه <strong>Arikayn</strong> آغاز کرد و در ساخت و تولید آثار گروه مشارکت داشت. همچنین به‌عنوان نوازندهٔ درامز با <strong>Bamikan</strong> همکاری کرده و با هنرمندان و موسیقی‌دانان دیگر نیز در زمینهٔ آهنگسازی و تولید موسیقی همکاری داشته است.
+</p>
+
+<p>
+از جمله آثار آهنگسازی او می‌توان به همکاری با <strong>Ghawgha Taban</strong>، ساخت موسیقی تیتراژ فیلم <em>پرنده</em> و قطعهٔ <strong>بیداد</strong> بر اساس شعری از <strong>فریدون مشیری</strong> اشاره کرد.
+</p>
+
+<p>
+در ادامهٔ مسیر هنری، او به جست‌وجوی رابطه میان صدا، حافظه، هویت فرهنگی و شعر می‌پردازد.
+</p>
+
+</div>
+
 </section>
 
+
+<section id="about-en" dir="ltr">
+
+<h2>About</h2>
+
+<div class="card">
+
+<p>
+<strong>Akbar Atayee</strong> is an Afghan musician, composer, poet, and artist based in Germany.
+</p>
+
+<p>
+His artistic practice moves between music, poetry, and experimental sound, with a particular interest in the dialogue between Afghan musical traditions, rock, electronic music, and contemporary sound.
+</p>
+
+<p>
+He began his musical career as a drummer and composer with <strong>Arikayn</strong>, contributing to the composition and production of the band's music. He has also collaborated with other musicians and artists, including work as a drummer with <strong>Bamikan</strong>.
+</p>
+
+<p>
+His compositional work includes music for <strong>Ghawgha Taban</strong>, the title music for the film <em>Paranda</em>, and the composition <strong>Bidad</strong>, based on a poem by <strong>Fereydoun Moshiri</strong>.
+</p>
+
+<p>
+His ongoing practice explores the relationship between sound, memory, cultural identity, and poetry.
+</p>
+
+</div>
+
+</section>
+
+
 <footer>
-  © 2026 · آرشیو شخصی شعر و موسیقی
+© 2026 Akbar Atayee · Poetry · Music · Sound
 </footer>
 
 </body>
