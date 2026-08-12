@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>آرشیو شعر و موسیقی</title>
+  <meta name="description" content="آرشیو شخصی شعر، موسیقی و آثار هنری">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: #101010; color: #eee;
+      font-family: Vazirmatn, sans-serif; line-height: 2;
+    }
+    header {
+      min-height: 82vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 40px 20px;
+      background: radial-gradient(circle at center, #272727 0, #101010 58%);
+    }
+    .hero { max-width: 760px; }
+    .eyebrow { color: #aaa; letter-spacing: 3px; font-size: .8rem; }
+    h1 { font-size: clamp(2.5rem, 7vw, 5.5rem); margin: 15px 0; font-weight: 300; }
+    .hero p { color: #bbb; font-size: 1.1rem; }
+    nav {
+      position: sticky; top: 0; z-index: 10; padding: 12px 20px;
+      background: rgba(16,16,16,.92); backdrop-filter: blur(10px);
+      border-bottom: 1px solid #292929; text-align: center;
+    }
+    nav a { color: #ddd; text-decoration: none; margin: 0 14px; font-size: .9rem; }
+    section { max-width: 900px; margin: auto; padding: 80px 22px; }
+    h2 { font-size: 2rem; font-weight: 400; margin-bottom: 35px; }
+    .poem, .track, .about {
+      border: 1px solid #292929; border-radius: 18px; padding: 28px;
+      background: #151515; margin-bottom: 25px;
+    }
+    .poem-title { font-size: 1.35rem; margin-top: 0; }
+    .poem-text { white-space: pre-line; color: #d4d4d4; }
+    audio { width: 100%; margin-top: 12px; }
+    .track small { color: #888; }
+    footer { text-align: center; padding: 50px 20px; color: #777; border-top: 1px solid #292929; }
+    @media (max-width: 600px) {
+      nav a { margin: 0 6px; font-size: .78rem; }
+      section { padding: 55px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header id="home">
+  <div class="hero">
+    <div class="eyebrow">POETRY · MUSIC · SOUND</div>
+    <h1>نام هنری شما</h1>
+    <p>آرشیوی شخصی از شعرها، موسیقی‌ها و تجربه‌های هنری من.</p>
+  </div>
+</header>
+
+<nav>
+  <a href="#poems">شعرها</a>
+  <a href="#music">موسیقی</a>
+  <a href="#about">درباره من</a>
+</nav>
+
+<section id="poems">
+  <h2>شعرها</h2>
+
+  <article class="poem">
+    <h3 class="poem-title">شَبور</h3>
+    <div class="poem-text">متن شعر خود را اینجا قرار دهید.
+
+می‌توانید هر شعر را در یک بخش جداگانه اضافه کنید.</div>
+  </article>
+
+  <article class="poem">
+    <h3 class="poem-title">شعر دوم</h3>
+    <div class="poem-text">متن شعر دوم را اینجا قرار دهید.</div>
+  </article>
+</section>
+
+<section id="music">
+  <h2>موسیقی</h2>
+
+  <div class="track">
+    <strong>قطعه اول</strong><br>
+    <small>نام آهنگساز / سال</small>
+    <audio controls>
+      <source src="audio/track-01.mp3" type="audio/mpeg">
+      مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+    </audio>
+  </div>
+
+  <div class="track">
+    <strong>قطعه دوم</strong><br>
+    <small>نام آهنگساز / سال</small>
+    <audio controls>
+      <source src="audio/track-02.mp3" type="audio/mpeg">
+      مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+    </audio>
+  </div>
+</section>
+
+<section id="about">
+  <h2>درباره من</h2>
+  <div class="about">
+    <p>
+      اینجا می‌توانید بیوگرافی هنری خود، فعالیت‌های موسیقایی،
+      پروژه‌ها و مسیر هنری‌تان را بنویسید.
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 · آرشیو شخصی شعر و موسیقی
+</footer>
+
+</body>
+</html>
