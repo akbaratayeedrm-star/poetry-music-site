@@ -201,6 +201,35 @@ footer {
   margin: 25px auto 0;
   color: #999;
   font-size: 16px;
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.work-card {
+  background: linear-gradient(145deg, #151515, #0e0e0e);
+  border: 1px solid #292929;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all .3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  border-color: #555;
+  box-shadow: 0 12px 35px rgba(0,0,0,.4);
+}
+
+.work-card strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.work-card .meta {
+  line-height: 1.8;
 }
 @media (max-width: 600px) {
 
